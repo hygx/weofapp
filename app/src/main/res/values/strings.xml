@@ -3,4 +3,9 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="hometag">对自己的寄语</string>
+    <string name="outher1">王浩</string>
+    <string name="outher2">许强强</string>
+    <string name="outher3">曹智民</string>
+    <string name="outher4">阳斌</string>
 </resources>
