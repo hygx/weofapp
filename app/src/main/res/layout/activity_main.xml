@@ -15,7 +15,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:text="王浩:"
+        android:text="王浩:勇往直前,感想敢做"
         android:layout_marginTop="5dp"
         android:layout_height="wrap_content" />
 
