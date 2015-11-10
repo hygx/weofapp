@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.example.weofapphao.czm.impls.PageSwitcher;
 import android.widget.Button;
 
 import com.example.weofapphao.wanghao.HaoMainActivity;
@@ -64,7 +66,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
 
             case R.id.auther3://曹智民项目
-
+                new PageSwitcher(this).toCzmHomePage();
                 break;
 
             case R.id.auther4://杨斌的项目

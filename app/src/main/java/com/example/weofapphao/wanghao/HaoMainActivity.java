@@ -13,7 +13,7 @@ import java.util.Date;
 
 
 /**
- * Created by  on 2015/11/8.
+ * Created by 鐜嬫旦 on 2015/11/8.
  */
 public class HaoMainActivity extends HaoBaseActivity {
 
@@ -22,13 +22,13 @@ public class HaoMainActivity extends HaoBaseActivity {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
 
-            SimpleDateFormat formatter    =   new    SimpleDateFormat    ("yyyy年MM月dd日    HH:mm:ss     ");
-            Date    curDate    =   new Date(System.currentTimeMillis());//获取当前时间
+            SimpleDateFormat formatter    =   new    SimpleDateFormat    ("yyyy锟斤拷MM锟斤拷dd锟斤拷    HH:mm:ss     ");
+            Date    curDate    =   new Date(System.currentTimeMillis());//锟斤拷取锟斤拷前时锟斤拷
             String    str    =    formatter.format(curDate);
 
             TextView tv = (TextView) msg.obj;
 
-            tv.setText("动态显示时间:"+str);
+            tv.setText("锟斤拷态锟斤拷示时锟斤拷:"+str);
 
             Message message = handler.obtainMessage();
 
