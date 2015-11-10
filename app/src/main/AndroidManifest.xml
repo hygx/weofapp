@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".czm.ui.CzmHomeActivity"
+                  android:configChanges="orientation|screenSize|keyboardHidden"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTop"
+                  android:theme="@style/no_title"
+            />
     </application>
 
 </manifest>
