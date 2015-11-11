@@ -1,7 +1,8 @@
 package com.example.weofapphao.czm.common.utils;
 
-import com.litesuits.android.log.Log;
-import com.litesuits.common.assist.Check;
+
+import com.example.weofapphao.czm.android.log.Log;
+import com.example.weofapphao.czm.common.assist.Check;
 
 import java.io.*;
 import java.util.regex.Pattern;

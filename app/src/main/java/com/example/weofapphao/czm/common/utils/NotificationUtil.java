@@ -11,7 +11,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
-import com.litesuits.android.log.Log;
+
+import com.example.weofapphao.czm.android.log.Log;
 
 import java.util.ArrayList;
 
@@ -70,7 +71,7 @@ public class NotificationUtil {
 
             PendingIntent contentItent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
             notification.tickerText = ticker;
-            notification.setLatestEventInfo(context, title, msg, contentItent);
+//            notification.setLatestEventInfo(context, title, msg, contentItent);
             // 把Notification传递给NotificationManager
             notificationManager.notify(0, notification);
         }

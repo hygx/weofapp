@@ -2,7 +2,7 @@ package com.example.weofapphao.czm.common.utils;
 
 import android.content.Context;
 import android.telephony.TelephonyManager;
-import com.litesuits.android.log.Log;
+import com.example.weofapphao.czm.android.log.Log;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

@@ -3,7 +3,8 @@ package com.example.weofapphao.czm.common.assist;
 import android.content.Context;
 import android.os.Build;
 import android.os.PowerManager;
-import com.litesuits.android.log.Log;
+
+import com.example.weofapphao.czm.android.log.Log;
 
 /**
  * <!-- 亮屏 -->

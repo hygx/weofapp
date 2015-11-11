@@ -7,8 +7,9 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
-import com.litesuits.android.log.Log;
-import com.litesuits.common.assist.Base64;
+
+import com.example.weofapphao.czm.android.log.Log;
+import com.example.weofapphao.czm.common.assist.Base64;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
