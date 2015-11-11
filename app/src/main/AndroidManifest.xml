@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
+
+
+        <!--Rrtoyewx-->
+        <activity android:name="com.example.weofapphao.xqq.RrtoyewxMainActivity"/>
+        <!--Rrtoyewx-->
     </application>
 
 </manifest>
