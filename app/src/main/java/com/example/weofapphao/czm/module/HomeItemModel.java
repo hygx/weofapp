@@ -5,7 +5,9 @@ package com.example.weofapphao.czm.module;
  */
 public class HomeItemModel {
     public String Text;
-    public HomeItemModel(String text) {
+    public Class clazz;
+    public HomeItemModel(String text,Class clazz) {
         Text = text;
+        this.clazz=clazz;
     }
 }

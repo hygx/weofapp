@@ -17,13 +17,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * Created by ºÆ on 2015/11/10.
+ * Created by ï¿½ï¿½ on 2015/11/10.
  *
  */
 public class ShowFunctionInfo extends ImageView implements View.OnClickListener {
 
     /**
-     * ÐÅÏ¢±ê¼Ç
+     * ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½
      */
     private int tag ;
 
@@ -46,7 +46,7 @@ public class ShowFunctionInfo extends ImageView implements View.OnClickListener 
 
                 new AlertDialog.Builder(getContext())
                         .setMessage(split[tag])
-                        .setPositiveButton("È·¶¨", null)
+                        .setPositiveButton("È·ï¿½ï¿½", null)
                         .show();
 
                 break ;

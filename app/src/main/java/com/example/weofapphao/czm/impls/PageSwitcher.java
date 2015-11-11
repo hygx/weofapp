@@ -19,4 +19,10 @@ public class PageSwitcher implements IPageSwitcher{
         Intent intent=new Intent(fromActivity, CzmHomeActivity.class);
         fromActivity.startActivity(intent);
     }
+
+    @Override
+    public void toActivityByClass(Class clazz) {
+        Intent intent=new Intent(fromActivity, clazz);
+        fromActivity.startActivity(intent);
+    }
 }
