@@ -1,15 +1,22 @@
 package com.example.weofapphao.wanghao;
 
+import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.weofapphao.R;
+import com.example.weofapphao.czm.common.utils.BitmapUtil;
 import com.example.weofapphao.wanghao.base.HaoBaseActivity;
+import com.example.weofapphao.wanghao.utils.AnimUtils;
 
+import java.lang.ref.SoftReference;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -17,12 +24,14 @@ import java.util.Date;
  */
 public class HaoMainActivity extends HaoBaseActivity {
 
+    Map<String,SoftReference<ImageView>> mSoftGroup =  new HashMap<>();
+
     static Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
 
-            SimpleDateFormat formatter    =   new    SimpleDateFormat    ("yyyy��MM��dd��    HH:mm:ss     ");
+            SimpleDateFormat formatter    =   new    SimpleDateFormat    ("yyyy年MM月dd日    HH:mm:ss     ");
             Date    curDate    =   new Date(System.currentTimeMillis());//��ȡ��ǰʱ��
             String    str    =    formatter.format(curDate);
 
@@ -68,6 +77,38 @@ public class HaoMainActivity extends HaoBaseActivity {
         message.obj = v  ;
 
         handler.sendMessageAtTime(message, 2000);
+    }
+
+    public void click2(View v){
+
+        ImageView  imgShow =   (ImageView)  ( (View)v.getParent()).findViewById(R.id.softiv);
+
+        imgShow.setImageResource(R.mipmap.ic_launcher);;
+
+
+        SoftReference<ImageView> img1 = mSoftGroup.get("img1");
+
+        if(img1==null){//软引用 取值 为空 则 重新加载对象
+            //开启按钮退出
+            AnimUtils.startAlphaAnim(v,1,0);
+            //开启图片出现
+            AnimUtils.startAlphaAnim(imgShow,0,1);
+
+            //软引用加载
+            SoftReference<ImageView> softimg  = new SoftReference<ImageView>(imgShow);
+            mSoftGroup.put("img1",softimg);
+
+        }else{
+            //按钮出现
+            AnimUtils.startAlphaAnim(v,0,1);
+            //开启图片消失
+            AnimUtils.startAlphaAnim(imgShow,1,0);
+
+            mSoftGroup.remove("img1");
+        }
+
+
+
     }
 
 }

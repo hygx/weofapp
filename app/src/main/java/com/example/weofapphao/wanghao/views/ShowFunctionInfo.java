@@ -42,11 +42,11 @@ public class ShowFunctionInfo extends ImageView implements View.OnClickListener 
             case MotionEvent.ACTION_UP:
                 String textInfo = getTextInfo();
 
-                String[] split = textInfo.split(" ");
+                String[] split = textInfo.split("\n");
 
                 new AlertDialog.Builder(getContext())
-                        .setMessage(split[tag])
-                        .setPositiveButton("ȷ��", null)
+                        .setMessage(split[split.length-1])
+                        .setPositiveButton("确定", null)
                         .show();
 
                 break ;
