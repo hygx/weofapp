@@ -10,6 +10,7 @@ public class LZHActivity extends ActionBarActivity {
 
 
     private SlidingMenu mMenu;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
