@@ -17,7 +17,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
 
 
-    private Button wh,xqq,zcm,yb ;
+    private Button wh,xqq,zcm,yb,lzh ;
 
 
 
@@ -36,6 +36,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         xqq = (Button) findViewById(R.id.auther2);
         zcm = (Button) findViewById(R.id.auther3);
         yb = (Button) findViewById(R.id.auther4);
+        lzh = (Button) findViewById(R.id.auther5);
 
         initViewData();
 
@@ -47,6 +48,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         xqq.setOnClickListener(this);
         zcm.setOnClickListener(this);
         yb.setOnClickListener(this);
+        lzh.setOnClickListener(this);
 
     }
 
@@ -70,6 +72,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
 
             case R.id.auther4://杨斌的项目
+
+                break;
+            case R.id.auther5://刘忠虎的项目
 
                 break;
 
