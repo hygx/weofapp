@@ -14,7 +14,7 @@
 
 
 
-    <com.example.weofapphao.wanghao.views.ShowFunctionInfo
+    <com.example.weofapphao.wh.views.ShowFunctionInfo
         android:layout_width="match_parent"
         android:src="@mipmap/ic_launcher"
         sat:infotag= "1"
@@ -36,5 +36,15 @@
         android:text="软引用加载图片"
         android:onClick="click2"
         android:layout_height="wrap_content" />
+
+
+
     </FrameLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="ObjectAnimation属性动画"
+        android:onClick="click3"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

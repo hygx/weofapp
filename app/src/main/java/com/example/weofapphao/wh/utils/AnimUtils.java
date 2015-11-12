@@ -1,4 +1,4 @@
-package com.example.weofapphao.wanghao.utils;
+package com.example.weofapphao.wh.utils;
 
 import android.view.View;
 import android.view.animation.AlphaAnimation;

@@ -1,4 +1,4 @@
-package com.example.weofapphao.wanghao.views;
+package com.example.weofapphao.wh.views;
 
 import android.app.AlertDialog;
 import android.content.Context;

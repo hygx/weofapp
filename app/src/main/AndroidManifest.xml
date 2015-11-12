@@ -41,7 +41,7 @@
             android:launchMode="singleTop"
             android:theme="@style/no_title" />
 
-        <activity android:name="com.example.weofapphao.wanghao.HaoMainActivity" />
+        <activity android:name="com.example.weofapphao.wh.HaoMainActivity" />
 
 
         <!-- ________________rrtoyewx___________________________-->

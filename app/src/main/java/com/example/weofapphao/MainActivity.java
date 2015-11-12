@@ -8,7 +8,7 @@ import android.view.View;
 import com.example.weofapphao.czm.impls.PageSwitcher;
 import android.widget.Button;
 
-import com.example.weofapphao.wanghao.HaoMainActivity;
+import com.example.weofapphao.wh.HaoMainActivity;
 import com.example.weofapphao.xqq.RrtoyewxMainActivity;
 
 

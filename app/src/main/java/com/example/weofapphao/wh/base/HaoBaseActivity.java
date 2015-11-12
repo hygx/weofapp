@@ -1,4 +1,4 @@
-package com.example.weofapphao.wanghao.base;
+package com.example.weofapphao.wh.base;
 
 import android.app.Activity;
 import android.os.Bundle;

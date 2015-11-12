@@ -1,6 +1,6 @@
-package com.example.weofapphao.wanghao;
+package com.example.weofapphao.wh;
 
-import android.graphics.Bitmap;
+import android.animation.ObjectAnimator;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
@@ -8,9 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.weofapphao.R;
-import com.example.weofapphao.czm.common.utils.BitmapUtil;
-import com.example.weofapphao.wanghao.base.HaoBaseActivity;
-import com.example.weofapphao.wanghao.utils.AnimUtils;
+import com.example.weofapphao.wh.base.HaoBaseActivity;
+import com.example.weofapphao.wh.utils.AnimUtils;
 
 import java.lang.ref.SoftReference;
 import java.text.SimpleDateFormat;
@@ -111,4 +110,22 @@ public class HaoMainActivity extends HaoBaseActivity {
 
     }
 
+
+    private int startY;
+
+    private int endY;
+
+    public  void click3(View v){
+        if(startY==0){
+            startY = 180;
+            endY = 0 ;
+        }else{
+            startY = 0;
+            endY = 180 ;
+        }
+
+        ObjectAnimator.ofFloat(v.getParent(),"rotationY",startY,endY)
+                .setDuration(500)
+                .start();
+    }
 }
