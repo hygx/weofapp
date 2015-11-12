@@ -61,7 +61,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
 
             case R.id.auther2://许强强项目
-                RrtoyewxMainActivity.start(this);
+                RrtoyewxMainActivity.start(MainActivity.this);
                 break;
 
             case R.id.auther3://曹智民项目

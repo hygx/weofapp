@@ -42,6 +42,12 @@
             android:theme="@style/no_title" />
 
         <activity android:name="com.example.weofapphao.wanghao.HaoMainActivity" />
+
+
+        <!-- ________________rrtoyewx___________________________-->
+        <activity android:name="com.example.weofapphao.xqq.RrtoyewxMainActivity" />
+        <activity android:name=".xqq.recycleview.RrtoyewxRecycleViewActivity" />
+        <!-- ________________rrtoyewx___________________________-->
     </application>
 
 </manifest>

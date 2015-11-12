@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="这是type1"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_item_rrtoyewx_recycleview_adapter_type1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="这是type1的内容"
+        android:textColor="@android:color/holo_blue_bright" />
+
+
+</LinearLayout>

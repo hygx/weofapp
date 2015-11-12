@@ -4,15 +4,29 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.weofapphao.R;
+import com.example.weofapphao.xqq.recycleview.RrtoyewxRecycleViewActivity;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 
 /**
  * Created by Rrtoyewx on 15/11/8.
  */
-public class RrtoyewxMainActivity extends Activity {
+public class RrtoyewxMainActivity extends AppCompatActivity {
     private static final String TAG = RrtoyewxMainActivity.class.getSimpleName();
+
+    @InjectView(R.id.btn_rrtoyewx_main_download)
+    Button _btnDownload;
+    @InjectView(R.id.btn_rrtoyewx_main_recycleview)
+    Button _btnRecycleview;
+
+    private Activity mActivity;
+
 
     public static void start(Context conext) {
         Intent it = new Intent(conext, RrtoyewxMainActivity.class);
@@ -21,10 +35,25 @@ public class RrtoyewxMainActivity extends Activity {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rrtoyewx_main);
+        ButterKnife.inject(this);
+        mActivity = this;
+
+        setListener();
     }
+
+    private void setListener() {
+        _btnRecycleview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RrtoyewxRecycleViewActivity.start(mActivity);
+            }
+        });
+
+    }
+
 
 
 }
