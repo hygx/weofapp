@@ -35,7 +35,7 @@
             android:launchMode="singleTop"
             android:theme="@style/no_title" />
 
-        <activity android:name="com.example.weofapphao.wh.HaoMainActivity" />
+        <activity android:name="com.example.weofapphao.wanghao.HaoMainActivity" />
     </application>
 
 </manifest>

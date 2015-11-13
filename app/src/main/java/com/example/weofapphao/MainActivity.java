@@ -1,13 +1,13 @@
 package com.example.weofapphao;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-
-import com.example.weofapphao.czm.impls.PageSwitcher;
 import android.widget.Button;
 
+import com.example.weofapphao.czm.impls.PageSwitcher;
+import com.example.weofapphao.liuzhonghu.LZHActivity;
 import com.example.weofapphao.wh.HaoMainActivity;
 import com.example.weofapphao.xqq.RrtoyewxMainActivity;
 
@@ -74,10 +74,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
                 break;
             case R.id.auther5://刘忠虎的项目
-
+                this.startActivity(new Intent(this, LZHActivity.class));
                 break;
-
         }
-
     }
 }
