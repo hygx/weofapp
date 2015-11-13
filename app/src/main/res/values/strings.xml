@@ -10,4 +10,5 @@
     <string name="outher4">阳斌</string>
     <string name="outher5">刘忠虎</string>
     <string name="title_activity_lzh">LZHActivity</string>
+    <string name="title_activity_sliding_menu">SlidingMenuActivity</string>
 </resources>
