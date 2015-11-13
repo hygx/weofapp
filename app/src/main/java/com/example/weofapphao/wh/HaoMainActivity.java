@@ -1,13 +1,19 @@
 package com.example.weofapphao.wh;
 
+import android.animation.Animator;
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.weofapphao.R;
+import com.example.weofapphao.czm.android.log.Log;
 import com.example.weofapphao.wh.base.HaoBaseActivity;
 import com.example.weofapphao.wh.utils.AnimUtils;
 
@@ -127,5 +133,58 @@ public class HaoMainActivity extends HaoBaseActivity {
         ObjectAnimator.ofFloat(v.getParent(),"rotationY",startY,endY)
                 .setDuration(500)
                 .start();
+    }
+
+
+    public void click4(final View view){
+
+        ObjectAnimator anim  = ObjectAnimator.ofFloat(view,"hgwd",0,1000).setDuration(1000);
+
+        anim.start();
+
+        anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+
+                float animatedValue = (float) animation.getAnimatedValue();
+
+
+                view.setTranslationX(-animatedValue);
+                view.setTranslationY(-animatedValue);
+
+                float v = (animatedValue / 1000) - 1;
+
+
+                Log.e("tag", (-v));
+
+                view.setAlpha(-v);
+            }
+        });
+
+        anim.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                ViewParent parent = view.getParent();
+               LinearLayout par = (LinearLayout) parent;
+                ObjectAnimator.ofFloat(parent,"translationY",par.getTranslationY(),par.getTranslationY()+view.getHeight(),par.getTranslationY(),par.getTranslationY()+view.getHeight()).setDuration(1500).start();
+            }
+
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        });
+
     }
 }
