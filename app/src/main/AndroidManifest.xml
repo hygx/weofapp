@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.weofapphao" >
+    package="com.example.weofapphao">
 
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -25,22 +23,19 @@
             android:launchMode="singleTop"
             android:theme="@style/no_title" />
         <activity
-            android:name=".czm.ui.Activity.StudObjectAnimator"
+            android:name="com.example.weofapphao.czm.ui.Activity.StudObjectAnimator"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/no_title" />
         <activity
-            android:name=".czm.ui.Activity.StudSurface"
+            android:name="com.example.weofapphao.czm.ui.Activity.StudSurface"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/no_title" />
-        <activity android:name=".wanghao.HaoMainActivity" />
-        <activity
-            android:name=".liuzhonghu.LZHActivity"
-            android:label="@string/title_activity_lzh" >
-        </activity>
+
+        <activity android:name="com.example.weofapphao.wanghao.HaoMainActivity" />
     </application>
 
 </manifest>

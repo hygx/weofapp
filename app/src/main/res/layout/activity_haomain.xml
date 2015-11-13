@@ -12,10 +12,39 @@
         android:layout_height="wrap_content" />
 
 
-    <com.example.weofapphao.wanghao.views.ShowFunctionInfo
+
+
+    <com.example.weofapphao.wh.views.ShowFunctionInfo
         android:layout_width="match_parent"
         android:src="@mipmap/ic_launcher"
         sat:infotag= "1"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/softiv"
+            android:layout_gravity="center"
+            android:onClick="click2"
+            android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="软引用加载图片"
+        android:onClick="click2"
+        android:layout_height="wrap_content" />
+
+
+
+    </FrameLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="ObjectAnimation属性动画"
+        android:onClick="click3"
         android:layout_height="wrap_content" />
 
 </LinearLayout>

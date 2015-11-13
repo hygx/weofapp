@@ -4,7 +4,7 @@ import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Environment;
 import android.os.StatFs;
-import com.litesuits.android.log.Log;
+import com.example.weofapphao.czm.android.log.Log;
 
 import java.io.*;
 import java.util.ArrayList;

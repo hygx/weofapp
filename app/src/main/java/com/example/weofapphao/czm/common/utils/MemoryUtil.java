@@ -5,7 +5,8 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Build;
 import android.text.format.Formatter;
-import com.litesuits.android.log.Log;
+
+import com.example.weofapphao.czm.android.log.Log;
 
 /**
  * Get memory info.

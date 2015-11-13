@@ -3,14 +3,13 @@ package com.example.weofapphao;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 
 import com.example.weofapphao.czm.impls.PageSwitcher;
 import android.widget.Button;
 
-import com.example.weofapphao.wanghao.HaoMainActivity;
+import com.example.weofapphao.wh.HaoMainActivity;
+import com.example.weofapphao.xqq.RrtoyewxMainActivity;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
@@ -64,7 +63,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
 
             case R.id.auther2://许强强项目
-
+                RrtoyewxMainActivity.start(MainActivity.this);
                 break;
 
             case R.id.auther3://曹智民项目
