@@ -9,14 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.method.CharacterPickerDialog;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.weofapphao.R;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
