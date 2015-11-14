@@ -6,9 +6,14 @@
 
     <Button
         android:id="@+id/myslidingmenu"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="No.1 进入自定义简单的侧滑菜单"/>
+    <Button
+        android:id="@+id/myqqslidingmenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No.1 进入仿QQ侧滑菜单"/>
 
 
 </LinearLayout>

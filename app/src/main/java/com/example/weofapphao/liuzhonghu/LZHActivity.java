@@ -12,14 +12,17 @@ import com.example.weofapphao.liuzhonghu.activity.SlidingMenuActivity;
 public class LZHActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mSlidingMenu;
+    private Button mQQSlidingMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lzh);
 
         mSlidingMenu = (Button) findViewById(R.id.myslidingmenu);
+        mQQSlidingMenu = (Button) findViewById(R.id.myqqslidingmenu);
 
         mSlidingMenu.setOnClickListener(this);
+        mQQSlidingMenu.setOnClickListener(this);
     }
 
     @Override
@@ -27,6 +30,9 @@ public class LZHActivity extends AppCompatActivity implements View.OnClickListen
         switch (view.getId()){
             case R.id.myslidingmenu:
                 this.startActivity(new Intent(this, SlidingMenuActivity.class));
+                break;
+            case R.id.myqqslidingmenu:
+
                 break;
         }
     }
