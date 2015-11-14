@@ -35,7 +35,12 @@
             android:launchMode="singleTop"
             android:theme="@style/no_title" />
 
-        <activity android:name="com.example.weofapphao.wanghao.HaoMainActivity" />
+
+<activity android:name="com.example.weofapphao.liuzhonghu.activity.SlidingMenuActivity"/>
+
+        <activity android:name="com.example.weofapphao.liuzhonghu.LZHActivity"/>
+
+        <activity android:name="com.example.weofapphao.wh.HaoMainActivity" />
     </application>
 
 </manifest>
