@@ -25,4 +25,11 @@ public class DownloadApplication extends Application {
     public static DownloadApplication getDownloadApplication() {
         return _instance;
     }
+
+    @Override
+    public void onTerminate() {
+
+        DownloadQueue.restoreQueue();
+        super.onTerminate();
+    }
 }

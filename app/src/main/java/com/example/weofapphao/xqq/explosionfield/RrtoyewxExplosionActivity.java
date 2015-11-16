@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.weofapphao.R;
+import com.example.weofapphao.xqq.model.ExplosionField;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

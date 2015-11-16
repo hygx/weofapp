@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 
 import com.example.weofapphao.R;
 import com.example.weofapphao.liuzhonghu.utils.ScreenUtils;
+import com.nineoldandroids.view.ViewHelper;
 
 /**
  * Created by liuzhonghu on 2015/11/12.
@@ -20,6 +21,10 @@ public class SlidingMenu extends HorizontalScrollView {
     private int mMenuRIghtPadding;
     private int mMenuWidth;
     private int mHalfMenuWidth;
+
+    private ViewGroup mMenu;
+    private ViewGroup mContent;
+
     private boolean isOpen;
     private boolean once;
 
@@ -61,13 +66,13 @@ public class SlidingMenu extends HorizontalScrollView {
          */
         if (!once) {
             LinearLayout wrapper = (LinearLayout) getChildAt(0);
-            ViewGroup menu = (ViewGroup) wrapper.getChildAt(0);
-            ViewGroup content = (ViewGroup) wrapper.getChildAt(1);
+            mMenu = (ViewGroup) wrapper.getChildAt(0);
+            mContent = (ViewGroup) wrapper.getChildAt(1);
 
             mMenuWidth = mScreenWidth - mMenuRIghtPadding;
             mHalfMenuWidth = mMenuWidth / 2;
-            menu.getLayoutParams().width = mMenuWidth;
-            content.getLayoutParams().width = mScreenWidth;
+            mMenu.getLayoutParams().width = mMenuWidth;
+            mContent.getLayoutParams().width = mScreenWidth;
         }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
@@ -100,15 +105,33 @@ public class SlidingMenu extends HorizontalScrollView {
         return super.onTouchEvent(ev);
     }
 
+    @Override
+    protected void onScrollChanged(int l, int t, int oldl, int oldt) {
+        super.onScrollChanged(l, t, oldl, oldt);
+        float scale = l * 1.0f / mMenuWidth;
+        float leftScale = 1 - 0.3f * scale;
+        float rightScale = 0.8f + scale * 0.2f;
+
+        ViewHelper.setScaleX(mMenu, leftScale);
+        ViewHelper.setScaleY(mMenu, leftScale);
+        ViewHelper.setAlpha(mMenu, 0.6f + 0.4f * (1 - scale));
+        ViewHelper.setTranslationX(mMenu, mMenuWidth * scale * 0.7f);
+
+        ViewHelper.setPivotX(mContent, 0);
+        ViewHelper.setPivotY(mContent, mContent.getHeight() / 2);
+        ViewHelper.setScaleX(mContent, rightScale);
+        ViewHelper.setScaleY(mContent, rightScale);
+    }
+
     public void openMenu() {
         if (isOpen) return;
-        this.smoothScrollTo(0,0);
+        this.smoothScrollTo(0, 0);
         isOpen = true;
     }
 
-    public void closeMenu(){
-        if (isOpen){
-            this.smoothScrollTo(mMenuWidth,0);
+    public void closeMenu() {
+        if (isOpen) {
+            this.smoothScrollTo(mMenuWidth, 0);
             isOpen = false;
         }
     }
@@ -116,10 +139,10 @@ public class SlidingMenu extends HorizontalScrollView {
     /**
      * 切换菜单状态
      */
-    public void toggle(){
-        if (isOpen){
+    public void toggle() {
+        if (isOpen) {
             closeMenu();
-        }else{
+        } else {
             openMenu();
         }
     }
