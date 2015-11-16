@@ -37,7 +37,8 @@
             android:launchMode="singleTop"
             android:theme="@style/no_title" />
         <activity android:name=".wh.HaoMainActivity" />
-        <activity android:name=".liuzhonghu.LZHActivity" />
+        <activity android:name=".liuzhonghu.LZHActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".liuzhonghu.activity.SlidingMenuActivity"
             android:label="@string/title_activity_sliding_menu"

@@ -1,15 +1,15 @@
 package com.example.weofapphao.liuzhonghu;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.weofapphao.R;
 import com.example.weofapphao.liuzhonghu.activity.SlidingMenuActivity;
 
-public class LZHActivity extends AppCompatActivity implements View.OnClickListener {
+public class LZHActivity extends Activity implements View.OnClickListener {
 
     private Button mSlidingMenu;
     @Override
@@ -27,9 +27,6 @@ public class LZHActivity extends AppCompatActivity implements View.OnClickListen
         switch (view.getId()){
             case R.id.myslidingmenu:
                 this.startActivity(new Intent(this, SlidingMenuActivity.class));
-                break;
-            case R.id.myqqslidingmenu:
-
                 break;
         }
     }
