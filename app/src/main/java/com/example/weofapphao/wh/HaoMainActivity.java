@@ -156,11 +156,8 @@ public class HaoMainActivity extends HaoBaseActivity {
                 view.setTranslationY(-animatedValue);
 
                 float v = (animatedValue / 1000) - 1;
-
-
-                Log.e("tag", (-v));
-
-                view.setAlpha(-v);
+                v =  -v <0.7 ? 0 : -v ;
+                view.setAlpha(v);
             }
         });
 
