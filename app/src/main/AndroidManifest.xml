@@ -30,18 +30,20 @@
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/no_title" />
+
         <activity
             android:name=".czm.ui.Activity.StudSurface"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/no_title" />
-        <activity android:name=".wh.HaoMainActivity" />
+        <activity android:name=".wh.HaoMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".liuzhonghu.LZHActivity" />
         <activity
             android:name=".liuzhonghu.activity.SlidingMenuActivity"
             android:label="@string/title_activity_sliding_menu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme2"></activity>
 
         <!--         Rrtoyewx             -->
         <activity android:name="com.example.weofapphao.xqq.RrtoyewxMainActivity" />

@@ -5,6 +5,7 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
@@ -31,6 +32,7 @@ public class HaoMainActivity extends HaoBaseActivity {
 
     Map<String,SoftReference<ImageView>> mSoftGroup =  new HashMap<>();
 
+    Toolbar toolbar ;
     static Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -55,7 +57,7 @@ public class HaoMainActivity extends HaoBaseActivity {
 
     @Override
     protected void initModel() {
-
+       setSupportActionBar (toolbar);
     }
 
     @Override
@@ -65,6 +67,7 @@ public class HaoMainActivity extends HaoBaseActivity {
 
     @Override
     protected void initView() {
+        toolbar  = (Toolbar) findViewById(R.id.toolbar);
 
     }
 
