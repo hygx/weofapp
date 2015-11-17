@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import com.example.weofapphao.R;
 import com.example.weofapphao.liuzhonghu.activity.anim_activity.AnimSetActivity;
@@ -13,21 +12,14 @@ import com.example.weofapphao.liuzhonghu.activity.anim_activity.ValueAnimActivit
 
 public class AnimatorActivity extends Activity implements View.OnClickListener {
 
-    private Button btn_objectanimator;
-    private Button btn_valueanimator;
-    private Button btn_animatorset;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animator);
 
-        btn_objectanimator = (Button) findViewById(R.id.btn_objectanimator);
-        btn_valueanimator = (Button) findViewById(R.id.btn_valueanimator);
-        btn_animatorset = (Button) findViewById(R.id.btn_animatorset);
-
-        btn_objectanimator.setOnClickListener(this);
-        btn_valueanimator.setOnClickListener(this);
-        btn_animatorset.setOnClickListener(this);
+        findViewById(R.id.btn_objectanimator).setOnClickListener(this);
+        findViewById(R.id.btn_valueanimator).setOnClickListener(this);
+        findViewById(R.id.btn_animatorset).setOnClickListener(this);
     }
 
     @Override
