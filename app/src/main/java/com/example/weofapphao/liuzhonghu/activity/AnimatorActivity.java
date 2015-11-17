@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.weofapphao.R;
+import com.example.weofapphao.liuzhonghu.activity.anim_activity.AnimSetActivity;
 import com.example.weofapphao.liuzhonghu.activity.anim_activity.ObjectAnimActivity;
 import com.example.weofapphao.liuzhonghu.activity.anim_activity.ValueAnimActivity;
 
@@ -39,6 +40,7 @@ public class AnimatorActivity extends Activity implements View.OnClickListener {
                 this.startActivity(new Intent(this, ValueAnimActivity.class));
                 break;
             case R.id.btn_animatorset:
+                this.startActivity(new Intent(this, AnimSetActivity.class));
                 break;
         }
     }

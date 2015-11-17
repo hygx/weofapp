@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.weofapphao">
+    package="com.example.weofapphao" >
 
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
 
@@ -8,10 +8,10 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,16 +37,17 @@
             android:launchMode="singleTop"
             android:theme="@style/no_title" />
         <activity android:name=".wh.HaoMainActivity" />
-        <activity android:name=".liuzhonghu.LZHActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".liuzhonghu.LZHActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".liuzhonghu.activity.SlidingMenuActivity"
             android:label="@string/title_activity_sliding_menu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
-        <!--         Rrtoyewx             -->
-        <activity android:name="com.example.weofapphao.xqq.RrtoyewxMainActivity" />
-        <activity android:name="com.example.weofapphao.xqq.recycleview.RrtoyewxRecycleViewActivity" />
+        <!-- Rrtoyewx -->
+        <activity android:name=".xqq.RrtoyewxMainActivity" />
+        <activity android:name=".xqq.recycleview.RrtoyewxRecycleViewActivity" />
         <activity android:name=".xqq.explosionfield.RrtoyewxExplosionActivity" />
         <!-- Rrtoyewx -->
         <activity
@@ -60,6 +61,8 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity android:name=".liuzhonghu.activity.anim_activity.ValueAnimActivity" >
+        </activity>
+        <activity android:name=".liuzhonghu.activity.anim_activity.AnimSetActivity" >
         </activity>
     </application>
 
