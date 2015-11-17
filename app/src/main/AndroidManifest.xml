@@ -36,7 +36,9 @@
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/no_title" />
-        <activity android:name=".wh.HaoMainActivity" />
+        <activity android:name=".wh.HaoMainActivity"
+            android:theme="@style/AppTheme2"
+            />
         <activity android:name=".liuzhonghu.LZHActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity

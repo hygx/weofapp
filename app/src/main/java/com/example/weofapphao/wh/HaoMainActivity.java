@@ -1,6 +1,7 @@
 package com.example.weofapphao.wh;
 
 import android.animation.Animator;
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.os.Handler;
@@ -9,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.view.animation.AnimationSet;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -170,8 +172,8 @@ public class HaoMainActivity extends HaoBaseActivity {
             @Override
             public void onAnimationEnd(Animator animation) {
                 ViewParent parent = view.getParent();
-               LinearLayout par = (LinearLayout) parent;
-                ObjectAnimator.ofFloat(parent,"translationY",par.getTranslationY(),par.getTranslationY()+view.getHeight(),par.getTranslationY(),par.getTranslationY()+view.getHeight()).setDuration(1500).start();
+                LinearLayout par = (LinearLayout) parent;
+                ObjectAnimator.ofFloat(parent, "translationY", par.getTranslationY(), par.getTranslationY() + view.getHeight(), par.getTranslationY(), par.getTranslationY() + view.getHeight()).setDuration(1500).start();
             }
 
 
@@ -187,4 +189,23 @@ public class HaoMainActivity extends HaoBaseActivity {
         });
 
     }
+
+
+    public void click5(View v){
+        ObjectAnimator animstart =   ObjectAnimator.ofFloat(v.getParent(), "translationX", 0, 1000,1000,0).setDuration(500);
+        ObjectAnimator animmove =   ObjectAnimator.ofFloat(v.getParent(), "translationY", 0, 1000,1000,0).setDuration(500);
+        ObjectAnimator animend =   ObjectAnimator.ofFloat(v.getParent(), "rotationX", 0, 360).setDuration(1000);
+        ObjectAnimator animend2 =   ObjectAnimator.ofFloat(v.getParent(), "rotationY", 0, 360).setDuration(1000);
+
+        AnimatorSet set  = new AnimatorSet();
+        set.play(animend).with(animstart).with( ObjectAnimator.ofFloat(v.getParent(), "translationY", 0, 1000,1000,0).setDuration(500))
+                .with(ObjectAnimator.ofFloat(v.getParent(), "rotationY", 0, 360).setDuration(1000))
+                .after(ObjectAnimator.ofFloat(v.getParent(), "translationX", 0, 1000, 1000, 0).setDuration(500)).after( ObjectAnimator.ofFloat(v.getParent(), "translationY", 0, 1000,1000,0).setDuration(500))
+                .before(ObjectAnimator.ofFloat(v.getParent(), "rotationX", 0, 360).setDuration(1000))
+                .before(ObjectAnimator.ofFloat(v.getParent(), "rotationY", 0, 360).setDuration(1000));
+        set.start();
+
+
+    }
+
 }
