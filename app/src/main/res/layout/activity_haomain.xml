@@ -61,6 +61,16 @@
         android:text="组合 动画"
         android:onClick="click5"
         android:layout_height="wrap_content" />
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="炸炸炸"
+        android:onClick="click6"
+        android:layout_height="wrap_content" />
+
+
    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
