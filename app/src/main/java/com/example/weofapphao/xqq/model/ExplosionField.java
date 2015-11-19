@@ -51,7 +51,6 @@ public class ExplosionField extends View {
         ExplosionField explosionField = new ExplosionField(activity);
         ViewGroup rootView = (ViewGroup) activity.findViewById(android.R.id.content);
         rootView.addView(explosionField, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-
         return explosionField;
 
     }

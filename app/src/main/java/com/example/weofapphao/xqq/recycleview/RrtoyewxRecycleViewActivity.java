@@ -99,6 +99,17 @@ public class RrtoyewxRecycleViewActivity extends AppCompatActivity {
                 loadGirdLayout();
             }
         });
+        _btnStaggeredgridlayoutmanager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeToFixLayoitMannger();
+            }
+        });
+    }
+
+    private void changeToFixLayoitMannger() {
+        rvContent.setLayoutManager(new FixedGridLayoutManager());
+        rvContent.setAdapter(_adapter);
     }
 
 
