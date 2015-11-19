@@ -28,6 +28,7 @@
             android:layout_width="wrap_content"
             android:id="@+id/softiv"
             android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher"
             android:onClick="click2"
             android:layout_height="wrap_content" />
 
@@ -44,7 +45,43 @@
     <Button
         android:layout_width="match_parent"
         android:text="ObjectAnimation属性动画"
-        android:onClick="click3"
+    android:onClick="click3"
+    android:layout_height="wrap_content" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="扩大并且 变淡"
+        android:onClick="click4"
         android:layout_height="wrap_content" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="组合 动画"
+        android:onClick="click5"
+        android:layout_height="wrap_content" />
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="炸炸炸"
+        android:onClick="click6"
+        android:layout_height="wrap_content" />
+
+
+   <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="?attr/actionBarSize"
+        ></android.support.v7.widget.Toolbar>
+
+
+
+
+
+
 
 </LinearLayout>

@@ -2,11 +2,13 @@ package com.example.weofapphao.wh.base;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * Created by 浩 on 2015/11/8.
  */
-public abstract class HaoBaseActivity  extends Activity {
+public abstract class HaoBaseActivity  extends AppCompatActivity {
 
 
     @Override

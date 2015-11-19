@@ -36,8 +36,11 @@
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/no_title" />
-        <activity android:name=".wh.HaoMainActivity" />
-        <activity android:name=".liuzhonghu.LZHActivity" />
+        <activity android:name=".wh.HaoMainActivity"
+            android:theme="@style/AppTheme2"
+            />
+        <activity android:name=".liuzhonghu.LZHActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".liuzhonghu.activity.SlidingMenuActivity"
             android:label="@string/title_activity_sliding_menu"
@@ -47,7 +50,19 @@
         <activity android:name="com.example.weofapphao.xqq.RrtoyewxMainActivity" />
         <activity android:name="com.example.weofapphao.xqq.recycleview.RrtoyewxRecycleViewActivity" />
         <activity android:name=".xqq.explosionfield.RrtoyewxExplosionActivity" />
-        <!--         Rrtoyewx             -->
+        <!-- Rrtoyewx -->
+        <activity
+            android:name=".liuzhonghu.activity.AnimatorActivity"
+            android:label="@string/title_activity_animator"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".liuzhonghu.activity.anim_activity.ObjectAnimActivity"
+            android:label="@string/title_activity_object_anim"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name=".liuzhonghu.activity.anim_activity.ValueAnimActivity" >
+        </activity>
     </application>
 
 </manifest>

@@ -10,10 +10,10 @@
         android:layout_height="wrap_content"
         android:text="No.1 进入自定义简单的侧滑菜单"/>
     <Button
-        android:id="@+id/myqqslidingmenu"
+        android:id="@+id/myanimation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No.1 进入仿QQ侧滑菜单"/>
+        android:text="No.2 进入属性动画"/>
 
 
 </LinearLayout>

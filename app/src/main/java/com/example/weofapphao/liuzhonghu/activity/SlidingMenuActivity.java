@@ -21,4 +21,6 @@ public class SlidingMenuActivity extends AppCompatActivity {
     public void toggleMenu(View view){
         mMenu.toggle();
     }
+
+
 }

@@ -11,4 +11,6 @@
     <string name="outher5">刘忠虎</string>
     <string name="title_activity_lzh">LZHActivity</string>
     <string name="title_activity_sliding_menu">SlidingMenuActivity</string>
+    <string name="title_activity_animator">AnimatorActivity</string>
+    <string name="title_activity_object_anim">ObjectAnimActivity</string>
 </resources>
