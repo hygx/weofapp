@@ -16,9 +16,9 @@ public class Utils {
     }
 
     ;
-
-    private static final float DENSITY;
     private static final Canvas mCanvas;
+    private static final float DENSITY;
+
 
     static {
         DENSITY = Resources.getSystem().getDisplayMetrics().density;
