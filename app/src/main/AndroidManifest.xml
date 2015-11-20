@@ -44,9 +44,6 @@
         <activity android:name=".liuzhonghu.LZHActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name="com.example.weofapphao.liuzhonghu.LZHActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".liuzhonghu.activity.SlidingMenuActivity"
             android:label="@string/title_activity_sliding_menu"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -68,6 +65,7 @@
         </activity>
         <activity android:name=".liuzhonghu.activity.anim_activity.ValueAnimActivity" >
         </activity>
+        <activity android:name=".liuzhonghu.activity.anim_activity.AnimSetActivity"></activity>
     </application>
 
 </manifest>
