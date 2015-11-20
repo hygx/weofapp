@@ -14,27 +14,12 @@ import android.view.ViewGroup;
 import java.util.HashSet;
 import java.util.List;
 
-/**
- * A {@link android.support.v7.widget.RecyclerView.LayoutManager} implementation
- * that places children in a two-dimensional grid, sized to a fixed column count
- * value. User scrolling is possible in both horizontal and vertical directions
- * to view the data set.
- * <p/>
- * <p>The column count is controllable via {@link #setTotalColumnCount(int)}. The layout manager
- * will generate the number of rows necessary to accommodate the data set based on
- * the fixed column count.
- * <p/>
- * <p>This manager does make some assumptions to simplify the implementation:
- * <ul>
- * <li>All child views are assumed to be the same size</li>
- * <li>The window of visible views is a constant</li>
- * </ul>
- */
+
 public class FixedGridLayoutManager extends RecyclerView.LayoutManager {
 
     private static final String TAG = FixedGridLayoutManager.class.getSimpleName();
 
-    private static final int DEFAULT_COUNT = 1;
+    private static final int DEFAULT_COUNT = 10;
 
     /* View Removal Constants */
     private static final int REMOVE_VISIBLE = 0;

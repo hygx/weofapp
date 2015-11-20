@@ -33,7 +33,7 @@ public class RrtoyewxRecycleViewActivity extends AppCompatActivity {
     @InjectView(R.id.btn_rrtoyewx_recycleview_staggeredgridlayoutmanager)
     Button _btnStaggeredgridlayoutmanager;
     @InjectView(R.id.rv_rrtoyewx_recycleview_content)
-    RecyclerView rvContent;
+    BoundRecyclerView rvContent;
     @InjectView(R.id.btn_rrtoyewx_recycleview_addheaderview)
     Button btnAddheaderview;
 
@@ -68,11 +68,11 @@ public class RrtoyewxRecycleViewActivity extends AppCompatActivity {
     private void initData() {
         dataList = new ArrayList<>();
         rvContent.setHasFixedSize(true);
-
+        rvContent.setOverScrollMode(RecyclerView.OVER_SCROLL_ALWAYS);
         _linearLayoutManager = new LinearLayoutManager(mActivity, LinearLayoutManager.VERTICAL, false);
         _gridlayoutmanage = new GridLayoutManager(mActivity, 3, LinearLayoutManager.VERTICAL, false);
 
-        for (int i = 0; i < 40; i++) {
+        for (int i = 0; i < 100; i++) {
             dataList.add("content :" + i);
         }
         _adapter = new RecycleViewAdapter(mActivity);
@@ -109,7 +109,7 @@ public class RrtoyewxRecycleViewActivity extends AppCompatActivity {
 
     private void changeToFixLayoitMannger() {
         rvContent.setLayoutManager(new FixedGridLayoutManager());
-        rvContent.setAdapter(_adapter);
+        _adapter.setList(dataList);
     }
 
 

@@ -39,9 +39,9 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
         LayoutInflater inflater = LayoutInflater.from(_activity);
         View view = null;
         if (viewType == CONTENT_TYPE01) {
-            view = inflater.inflate(R.layout.item_rrtoyewx_recycleview_adapter_type1, null);
+            view = inflater.inflate(R.layout.item_rrtoyewx_recycleview_adapter_type1, parent, false);
         } else if (viewType == CONTENT_TYPE02) {
-            view = inflater.inflate(R.layout.item_rrtoyewx_recycleview_adapter_type2, null);
+            view = inflater.inflate(R.layout.item_rrtoyewx_recycleview_adapter_type2, parent, false);
         } else {
             view = headView.get(viewType);
         }

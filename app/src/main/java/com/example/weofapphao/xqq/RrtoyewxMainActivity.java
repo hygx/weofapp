@@ -11,6 +11,7 @@ import android.widget.Button;
 import com.example.weofapphao.R;
 import com.example.weofapphao.xqq.explosionfield.RrtoyewxExplosionActivity;
 import com.example.weofapphao.xqq.recycleview.RrtoyewxRecycleViewActivity;
+import com.example.weofapphao.xqq.recycleview.RrtoyewxRecyclerViewActivityTwo;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -27,6 +28,8 @@ public class RrtoyewxMainActivity extends AppCompatActivity {
     Button _btnRecycleview;
     @InjectView(R.id.btn_rrtoyewx_main_explosion)
     Button _btnExplosion;
+    @InjectView(R.id.btn_rrtoyewx_main_recycleview_two)
+    Button btnRecycleviewTwo;
 
     private Activity mActivity;
 
@@ -58,6 +61,12 @@ public class RrtoyewxMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 RrtoyewxExplosionActivity.start(mActivity);
+            }
+        });
+        btnRecycleviewTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // RrtoyewxRecyclerViewActivityTwo.start(mActivity);
             }
         });
 

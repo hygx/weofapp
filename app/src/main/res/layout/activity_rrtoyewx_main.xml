@@ -27,6 +27,13 @@
         android:textColor="@android:color/holo_red_light" />
 
     <Button
+        android:id="@+id/btn_rrtoyewx_main_recycleview_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="recycleView的学习二"
+        android:textColor="@android:color/holo_red_light" />
+
+    <Button
         android:id="@+id/btn_rrtoyewx_main_explosion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
