@@ -31,7 +31,8 @@ public class SlidingMenuActivity extends AppCompatActivity {
 
         mMenu = (SlidingMenu) findViewById(R.id.id_menu);
         mRecyclerView = (RecyclerView) findViewById(R.id.menu_recyclerview);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         mRecyclerView.setAdapter(new MenuAdapter());
     }
 
@@ -53,8 +54,7 @@ public class SlidingMenuActivity extends AppCompatActivity {
 
         @Override
         public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            MyViewHolder holder = new MyViewHolder(LayoutInflater.from(SlidingMenuActivity.this).inflate(R.layout.item_slidingmenu, parent, false));
-            return holder;
+            return new MyViewHolder(LayoutInflater.from(SlidingMenuActivity.this).inflate(R.layout.item_slidingmenu, parent, false));
         }
 
         @Override
@@ -74,8 +74,8 @@ public class SlidingMenuActivity extends AppCompatActivity {
 
             public MyViewHolder(View itemView) {
                 super(itemView);
-                icon = (ImageView) findViewById(R.id.img_icon);
-                title = (TextView) findViewById(R.id.tv_item);
+                icon = (ImageView) itemView.findViewById(R.id.img_icon);
+                title = (TextView) itemView.findViewById(R.id.tv_item);
             }
         }
     }
