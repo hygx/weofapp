@@ -3,7 +3,9 @@
     package="com.example.weofapphao">
 
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+    <supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture" />
+    <supports-gl-texture android:name="GL_OES_compressed_paletted_texture" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -36,11 +38,13 @@
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/no_title" />
-        <activity android:name=".wh.HaoMainActivity" />
+        <activity android:name=".wh.HaoMainActivity"
+            android:theme="@style/AppTheme2"
+            />
         <activity android:name=".liuzhonghu.LZHActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".liuzhonghu.LZHActivity"
+            android:name="com.example.weofapphao.liuzhonghu.LZHActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".liuzhonghu.activity.SlidingMenuActivity"

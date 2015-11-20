@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.animation.AnimationSet;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -262,5 +263,136 @@ private List<ExplosionAnimator> mExplosions = new ArrayList<>();
         explosion.start();
     }
 
+
+
+    public void click7(final View v){
+
+        Log.e("tagg",((View)v.getParent()).getWidth()+"))))"+((View)v.getParent()).getHeight());
+        ObjectAnimator anim1   = ObjectAnimator.ofFloat(((View)v.getParent()),"scaleX",1,0).setDuration(10000);
+        ObjectAnimator anim2   = ObjectAnimator.ofFloat(((View)v.getParent()),"scaleY",1,0).setDuration(10000);
+        ObjectAnimator anim3   = ObjectAnimator.ofFloat(((View)v.getParent()),"xxx",((View)v.getParent()).getWidth(),0).setDuration(10000);
+
+        final Random random=new Random(1000);
+        anim3.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                Log.e("11111:", "-------------" + random.nextInt(500) * 0.05f);
+                random.nextFloat();
+                ((View) v.getParent()).setTranslationX(random.nextInt(500) * 0.05f);
+                ((View) v.getParent()).setTranslationY(random.nextInt(500) * 0.05f);
+            }
+        });
+
+        AnimatorSet  anim  = new AnimatorSet();
+
+        anim.play(anim1).with(anim2).with(anim3);
+        anim.start();
+
+    }
+
+    public void click8(final View v){
+
+        LinearLayout parent=((LinearLayout) v.getParent());
+
+        AnimatorSet set  =  null  ;
+
+      aa:  for( int x=  0 ; x < (parent.getChildCount()) ; x ++ ){
+
+            if(R.id.she==parent.getChildAt(x).getId()){
+                Log.e("tag","一条过");
+                break aa;
+            }
+
+          set  =   AnimUtils.tremBle(parent.getChildAt(x),(x+1)*500);
+
+        }
+
+        Log.e("tag","动画结束");
+
+        assert set != null;
+        boolean boo = false;
+        final boolean[] finalBoo = {boo};
+        set.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                Log.e("tag","新的开始");
+
+                ObjectAnimator anim =   ObjectAnimator.ofFloat(v, "translationY", 0, -3000).setDuration(20000);
+
+                final GridLayout layou = (GridLayout) v;
+
+                final Random ran  =  new Random();
+
+                for( int x= 0 ; x < layou.getChildCount() ; x ++ ){
+                    Log.e("aaa:", "::" + layou.getChildAt(x));
+                    ObjectAnimator animtor =    ObjectAnimator.ofFloat(((View)layou.getChildAt(x)), "rotation", 0, 720).setDuration(5000);
+                    final int finalX = x;
+                    animtor.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                        @Override
+                        public void onAnimationUpdate(ValueAnimator animation) {
+                            Log.e("tag:", "::" +"_______onAnimationUpdate");
+
+                            if(!finalBoo[0]) {
+                                ObjectAnimator.ofFloat(((View) layou.getChildAt(finalX)), "translationY", 300, -1000).setDuration((finalX + 1) * 300).start();
+                                finalBoo[0] = true ;
+                            }
+                            //     ObjectAnimator.ofFloat(((View) layou.getChildAt(finalX)), "translationX", 0, 1000).setDuration((finalX + 1) * 300).start();
+
+                        }
+                    });
+
+             //       animtor.setRepeatCount(10);
+                    animtor.start();
+
+
+                }
+
+                anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        Log.e("aaaa", +animation.getDuration());
+                        if (animation.getDuration() > 300) {
+                            for (int x = 0; x < layou.getChildCount(); x++) {
+                                Log.e("aaa:", "::" + layou.getChildAt(x));
+                                ObjectAnimator animtor = ObjectAnimator.ofFloat(((View) layou.getChildAt(x)), "translationY", 0, ran.nextInt(1000)).setDuration(1000);
+                                ObjectAnimator animtor2 = ObjectAnimator.ofFloat(((View) layou.getChildAt(x)), "translationX", 0, ran.nextInt(600)).setDuration(1000);
+
+                                animtor.setRepeatCount(10);
+                                animtor.start();
+                                animtor2.setRepeatCount(10);
+                                animtor2.start();
+                            }
+                        }
+                    }
+                });
+
+
+
+                AnimatorSet animatorSet =  new AnimatorSet();
+                animatorSet.play(anim).before(AnimUtils.tremBle(v, 30000));
+                animatorSet.start();
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        });
+
+
+
+
+
+    }
 
 }
